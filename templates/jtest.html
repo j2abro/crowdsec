@@ -1,0 +1,12 @@
+<!doctype html>
+<title>Jtest page</title>
+{% if mydata %}
+data = {{ mydata }}
+
+{% else %}
+NO DATA
+
+{% endif %}
+
+<script>setTimeout(function() { alert("hello world"); }, 2000);</script>
+
