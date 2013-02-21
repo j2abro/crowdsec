@@ -11,6 +11,11 @@ def hello_world():
 def data(mydata=None):
 	return render_template('data.html', mydata=mydata)
 
+@app.route('/jtest/')
+@app.route('/data/<mydata>')
+def jtest(mydata=None):
+	return render_template('jtest.html', mydata=mydata)
+
 @app.route('/user/<name>')
 def show_name(name):
 	return 'VERSION 2 - your name is %s' % name
