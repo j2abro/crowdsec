@@ -13,7 +13,7 @@ def data(mydata=None):
 
 @app.route('/user/<name>')
 def show_name(name):
-	return 'your name is %s' % name
+	return 'VERSION 2 - your name is %s' % name
 			
 app.debug = True
 if __name__ == '__main__':
