@@ -16,9 +16,11 @@ def data(mydata=None):
 @app.route('/data/<mydata>')
 def jtest(mydata=None):
 	return render_template('jtest.html', mydata=mydata)
-	
+
+idealist = ['one', 'two', 'three', four]
+
 @app.route('/idealist/')
-def idealist():
+def idealist(listdata=None):
 	return render_template('idealist.html')
 		
 @app.route('/user/<name>')
