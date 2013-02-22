@@ -20,7 +20,7 @@ def jtest(mydata=None):
 idealist = ['one', 'two', 'three', 'four']
 
 @app.route('/idealist/')
-def idealist(listdata=None):
+def idealist(idealist=None):
 	return render_template('idealist.html')
 		
 @app.route('/user/<name>')
