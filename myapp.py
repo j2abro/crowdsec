@@ -17,11 +17,11 @@ def data(mydata=None):
 def jtest(mydata=None):
 	return render_template('jtest.html', mydata=mydata)
 
-listdata = ['one', 'two', 'three', 'four']
+mylist = ['one', 'two', 'three', 'four']
 
 @app.route('/idealist/')
 def idealist():
-	return render_template('idealist.html', listdata=listdata)
+	return render_template('idealist.html', listdata=mylist)
 		
 @app.route('/user/<name>')
 def show_name(name):
