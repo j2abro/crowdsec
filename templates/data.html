@@ -1,7 +1,8 @@
 <!doctype html>
 <title>DATA TEST PAGE</title>
 <head>
-<link rel="stylesheet" type="text/css" href="style.css">
+<title>Flaskr</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
 </head>
 {% if mydata %}
 <h1>data = {{ mydata }}</h1>
