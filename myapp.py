@@ -2,6 +2,8 @@ import os
 from flask import Flask, render_template
 app = Flask(__name__)
 
+url_for(’static’, filename=’style.css’)
+
 @app.route('/')
 def hello_world():
 	return 'hello world'
