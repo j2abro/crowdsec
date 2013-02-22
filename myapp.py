@@ -16,7 +16,11 @@ def data(mydata=None):
 @app.route('/data/<mydata>')
 def jtest(mydata=None):
 	return render_template('jtest.html', mydata=mydata)
-
+	
+@app.route('/idealist/')
+def idealist():
+	return render_template('idealist.html')
+		
 @app.route('/user/<name>')
 def show_name(name):
 	return 'VERSION 2 - your name is %s' % name

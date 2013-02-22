@@ -1,0 +1,80 @@
+<!doctype html>
+<title></title>
+
+<title>Idealist</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='theme.blue.css') }}">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type=text/javascript src="{{ url_for('static', filename='jquery.tablesorter.min.js') }}"></script>
+<script type=text/javascript src="{{ url_for('static', filename='jrun.js') }}"></script>
+
+<h1>Here is sortable table</h1>
+<h2>this should work on any browser</h2>
+<h3>more subtest goes here</h3>
+<br>
+<br>
+
+<!--
+<script>setTimeout(function() { alert("OK, later, show this"); }, 20000);</script>
+-->
+
+<script id='js'>
+$(function() {
+
+  // call the tablesorter plugin
+  $("table").tablesorter({
+    theme : 'blue',
+
+    // sort on the first column and third column in ascending order
+    sortList: [[0,0],[2,0]]
+  });
+
+});
+
+</script>
+
+
+<table class="tablesorter">
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>desc</th>
+      <th>one</th>
+      <th>two</th>
+      <th>three</th>
+      <th>four</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Peter</td>
+      <td>Parker</td>
+      <td>28</td>
+      <td>$9.99</td>
+      <td>20%</td>
+      <td>Jul 6, 2006 8:14 AM</td>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>Hood</td>
+      <td>33</td>
+      <td>$19.99</td>
+      <td>25%</td>
+      <td>Dec 10, 2002 5:14 AM</td>
+    </tr>
+    <tr>
+      <td>Bruce</td>
+      <td>Evans</td>
+      <td>22</td>
+      <td>$13.19</td>
+      <td>11%</td>
+      <td>Jan 18, 2007 9:12 AM</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+<br>
