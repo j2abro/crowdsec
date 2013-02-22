@@ -1,5 +1,7 @@
 <!doctype html>
 <title>Jtest page</title>
+<title>Flaskr</title>
+<script type=text/javascript src="{{ url_for('static', filename='jrun.js') }}"></script>
 {% if mydata %}
 data = {{ mydata }}
 
@@ -8,5 +10,5 @@ NO DATA
 
 {% endif %}
 
-<script>setTimeout(function() { alert("hello world"); }, 2000);</script>
+<script>setTimeout(function() { alert("OK, later, show this"); }, 20000);</script>
 
