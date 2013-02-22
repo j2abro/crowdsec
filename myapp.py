@@ -21,7 +21,7 @@ listdata = ['one', 'two', 'three', 'four']
 
 @app.route('/idealist/')
 def idealist(listdata=None):
-	return render_template('idealist.html', listdata)
+	return render_template('idealist.html', listdata=listdata)
 		
 @app.route('/user/<name>')
 def show_name(name):
