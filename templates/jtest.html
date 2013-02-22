@@ -1,72 +1,98 @@
 <!doctype html>
 <title>Jtest page</title>
 <title>Flaskr</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='theme.blue.css') }}">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type=text/javascript src="{{ url_for('static', filename='jquery.tablesorter.js') }}"></script>
+<script type=text/javascript src="{{ url_for('static', filename='jquery.tablesorter.min.js') }}"></script>
 <script type=text/javascript src="{{ url_for('static', filename='jrun.js') }}"></script>
 {% if mydata %}
 data = {{ mydata }}
 
 {% else %}
-NO DATA
+<h1>Here is sortable table</h1>
+<h2>this should work on any browser</h2>
+<h3>more subtest goes here</h3>
+<br>
+<br>
 
 {% endif %}
 
 <script>setTimeout(function() { alert("OK, later, show this"); }, 20000);</script>
 
+<script id='js'>
+$(function() {
 
-<table id="myTable" class="tablesorter">
-  <thead>
-    <tr>
-      <th>Last Name</th>
-      <th>First Name</th>
-      <th>Email</th>
-      <th>Due</th>
-      <th>Web Site</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Smith</td>
-      <td>John</td>
-      <td>jsmith@gmail.com</td>
-      <td>$50.00</td>
-      <td>http://www.jsmith.com</td>
-    </tr>
-    <tr>
-      <td>Bach</td>
-      <td>Frank</td>
-      <td>fbach@yahoo.com</td>
-      <td>$50.00</td>
-      <td>http://www.frank.com</td>
-    </tr>
-    <tr>
-      <td>Doe</td>
-      <td>Jason</td>
-      <td>jdoe@hotmail.com</td>
-      <td>$100.00</td>
-      <td>http://www.jdoe.com</td>
-    </tr>
-    <tr>
-      <td>Conway</td>
-      <td>Tim</td>
-      <td>tconway@earthlink.net</td>
-      <td>$50.00</td>
-      <td>http://www.timconway.com</td>
-    </tr>
-  </tbody>
-</table>
+  // call the tablesorter plugin
+  $("table").tablesorter({
+    theme : 'blue',
 
-<script>
-$(function(){
-  $("#myTable").tablesorter();
-});
+    // sort on the first column and third column in ascending order
+    sortList: [[0,0],[2,0]]
+  });
 
-$(function(){
-  $("#myTable").tablesorter({ sortList: [[0,0], [1,0]] });
 });
 
 </script>
 
 
+<table class="tablesorter">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Age</th>
+      <th>Total</th>
+      <th>Discount</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Peter</td>
+      <td>Parker</td>
+      <td>28</td>
+      <td>$9.99</td>
+      <td>20%</td>
+      <td>Jul 6, 2006 8:14 AM</td>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>Hood</td>
+      <td>33</td>
+      <td>$19.99</td>
+      <td>25%</td>
+      <td>Dec 10, 2002 5:14 AM</td>
+    </tr>
+    <tr>
+      <td>Clark</td>
+      <td>Kent</td>
+      <td>18</td>
+      <td>$15.89</td>
+      <td>44%</td>
+      <td>Jan 12, 2003 11:14 AM</td>
+    </tr>
+    <tr>
+      <td>Bruce</td>
+      <td>Almighty</td>
+      <td>45</td>
+      <td>$153.19</td>
+      <td>44%</td>
+      <td>Jan 18, 2001 9:12 AM</td>
+    </tr>
+    <tr>
+      <td>Bruce</td>
+      <td>Evans</td>
+      <td>22</td>
+      <td>$13.19</td>
+      <td>11%</td>
+      <td>Jan 18, 2007 9:12 AM</td>
+    </tr>
+  </tbody>
+</table>
 
+
+
+
+
+
+<br>
