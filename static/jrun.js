@@ -1,7 +1,7 @@
 /*
 setTimeout(function() { alert("OK, later, show this"); }, 200);
 */
-document.write("external file called, bro.... yes and we've changed it");
+document.write("external file called, bro.... yes and we've changed it"); 
 
 var listobject2 = {
 	one: "hello1111111",
