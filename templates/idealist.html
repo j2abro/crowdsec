@@ -8,9 +8,9 @@
 
 <!--
 # testing js in an include file. this works!
--->
-<script type=text/javascript src="{{ url_for('static', filename='jrun.js') }}"></script>
 
+<script type=text/javascript src="{{ url_for('static', filename='jrun.js') }}"></script>
+-->
 
 <h1>Here is sortable table</h1>
 <h2>this should work on any browser</h2>
@@ -27,6 +27,15 @@ var myobj = {
 	five: "fish",
 	six: "again"
 }
+var listobject = {
+	one: "hello",
+	two: "world",	
+	three: "bit",
+	four: "star",
+	five: "fish",
+	six: "again"
+};
+
 document.write("myobj ======111<br>");
 document.write("myobj =" + myobj['five'] + "<br>");
 document.write("listobject ======222<br>");
