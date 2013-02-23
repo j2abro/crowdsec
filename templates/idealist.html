@@ -8,13 +8,19 @@
 
 <!--
 # testing js in an include file. this works!
-<script type=text/javascript src="{{ url_for('static', filename='jrun.js') }}"></script>
 -->
+<script type=text/javascript src="{{ url_for('static', filename='jrun.js') }}"></script>
+
 
 <h1>Here is sortable table</h1>
 <h2>this should work on any browser</h2>
 <h3>more subtest goes here</h3>
 <br>
+<script>
+for k in listobject {
+	document.write("<p>k</p>");
+}
+</script>
 <br>
 
 <!--
