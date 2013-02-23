@@ -6,27 +6,9 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type=text/javascript src="{{ url_for('static', filename='jquery.tablesorter.min.js') }}"></script>
 <script type=text/javascript src="{{ url_for('static', filename='jrun.js') }}"></script>
-<!--
-# testing js in an include file. this works!
--->
 
 
-
-<h1>Here is sortable table</h1>
-<h2>this should work on any browser</h2>
-<h3>more subtest goes here</h3>
-<br>
-========
-<br>
 <script>
-var myobj = {
-	one: "hello",
-	two: "world",	
-	three: "bit",
-	four: "star",
-	five: "fish",
-	six: "again"
-}
 // THIS WORKS, below, BUT NOT AS INCLUDE
 /*
 
@@ -41,19 +23,16 @@ var listobject = {
 */
 
 
-document.write("1 ------------------------------------<br>");
-document.write("2 myobj =" + myobj['five'] + "<br><br>");
-
 document.write("3 ------------------------------------<br>"); // SO THE FOLLOWING doesn't work from ext .js file
 document.write("4 listo " + listobject['two'] + "<br><br>");
 
-document.write("5 ------------------------------------<br>");
+/*
 var list = ['one', 'two', 'three', 'four', 'five']
 for (var i=0; i<list.length; i++)
 { 
 document.write(list[i] + "<br>");
 }
-document.write("6------------------------------------<br>");
+*/
 </script>
 <br>
 ============
@@ -65,10 +44,6 @@ for (var d in listobject) {
 </script>
 <br>
 ============
-
-<!--
-<script>setTimeout(function() { alert("OK, later, show this"); }, 20000);</script>
--->
 
 <script id='js'>
 $(function() {
@@ -88,7 +63,7 @@ $(function() {
 
 {% if listdata %}
 
-<h1>data = {{ listdata }}</h1>
+<h1>lisdata = {{ listdata }}</h1>
 {% for i in range(1,4) %} 
 <p>Count: {{i}} says: {{ listdata[i] }} <b> got listdata from myapp.py</b></p>
 {% endfor %}
