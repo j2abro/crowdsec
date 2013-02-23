@@ -16,10 +16,29 @@
 <h2>this should work on any browser</h2>
 <h3>more subtest goes here</h3>
 <br>
+========
+
+<script>
+var myobj = {
+	one: "hello",
+	two: "world",	
+	three: "bit",
+	four: "star",
+	five: "fish",
+	six: "again"
+}
+document.write(listobject['two']);
+document.write("======---====-----====<br>");
+var list = ['one', 'two', 'three', 'four']
+for (var i=0; i<list.length; i++)
+{ 
+document.write(list[i] + "<br>");
+}
+</script>
 ============
 <script>
 document.write("<p>OK, lets iterate</p>");
-for(var d in listobject) {
+for (var d in listobject) {
 	document.write("<p>d</p>");
 }
 </script>
