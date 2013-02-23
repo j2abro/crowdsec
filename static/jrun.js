@@ -9,6 +9,7 @@ var listobject = {
 	three: "bit333",
 	four: "star444",
 	five: "fish555",
-	six: "again666"
+	six: "again666",
+	seven: "nowfinally777"
 };
 
