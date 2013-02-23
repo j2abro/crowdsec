@@ -28,6 +28,7 @@ var myobj = {
 	six: "again"
 }
 // THIS WORKS, below, BUT NOT AS INCLUDE
+/*
 var listobject = {
 	one: "hello",
 	two: "world",	
@@ -36,13 +37,14 @@ var listobject = {
 	five: "fish",
 	six: "again"
 };
-
+*/
 document.write("myobj ======111<br>");
 document.write("myobj =" + myobj['five'] + "<br><br>");
 
 document.write("listobject ======222<br>");
 // SO THE FOLLOWING WORKS WHEN THE OBJECT iS INCLUDED ABOVE, BUT not AS AN INCLUDE.js
-document.write("listo " + listobject['two'] + "<br>");
+document.write("listo " + listobject['two'] + "<br><br>");
+
 document.write("array/list======333<br>");
 var list = ['one', 'two', 'three', 'four']
 for (var i=0; i<list.length; i++)
@@ -55,7 +57,7 @@ document.write(list[i] + "<br>");
 <script>
 document.write("<p>OK, lets iterate</p>");
 for (var d in listobject) {
-	document.write("<p>d</p>");
+	document.write(listobject[d] + "<br>");
 }
 </script>
 <br>
