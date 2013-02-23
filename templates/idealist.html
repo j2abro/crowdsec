@@ -29,6 +29,7 @@ var myobj = {
 }
 // THIS WORKS, below, BUT NOT AS INCLUDE
 /*
+*/
 var listobject = {
 	one: "hello",
 	two: "world",	
@@ -38,20 +39,20 @@ var listobject = {
 	six: "again"
 };
 
-*/
-document.write("------------------------------------<br>");
-document.write("myobj =" + myobj['five'] + "<br><br>");
 
-document.write("------------------------------------<br>"); // SO THE FOLLOWING doesn't work from ext .js file
-document.write("listo " + listobject['two'] + "<br><br>");
+document.write("1 ------------------------------------<br>");
+document.write("2 myobj =" + myobj['five'] + "<br><br>");
 
-document.write("------------------------------------<br>");
+document.write("3 ------------------------------------<br>"); // SO THE FOLLOWING doesn't work from ext .js file
+document.write("4 listo " + listobject['two'] + "<br><br>");
+
+document.write("5 ------------------------------------<br>");
 var list = ['one', 'two', 'three', 'four']
 for (var i=0; i<list.length; i++)
 { 
 document.write(list[i] + "<br>");
 }
-document.write("------------------------------------<br>");
+document.write("6------------------------------------<br>");
 </script>
 <br>
 ============
