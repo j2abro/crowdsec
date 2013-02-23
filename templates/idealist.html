@@ -17,7 +17,7 @@
 <h3>more subtest goes here</h3>
 <br>
 ========
-
+<br>
 <script>
 var myobj = {
 	one: "hello",
@@ -27,14 +27,18 @@ var myobj = {
 	five: "fish",
 	six: "again"
 }
-document.write(myobj['five']);
-document.write("======---====-----====<br>");
+document.write("myobj======111<br>");
+document.write("myobj " + myobj['five'] + "<br>");
+document.write("listobject======222<br>");
+document.write("listo " + listobject['five'] + "<br>");
+document.write("array/list======333<br>");
 var list = ['one', 'two', 'three', 'four']
 for (var i=0; i<list.length; i++)
 { 
 document.write(list[i] + "<br>");
 }
 </script>
+<br>
 ============
 <script>
 document.write("<p>OK, lets iterate</p>");
