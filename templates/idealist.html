@@ -11,8 +11,8 @@
 <body>
 <script>
 document.write(" ------------------------------------<br>"); // SO THE FOLLOWING doesn't work from ext .js file
-document.write("listobject['two']=" + listobject['two'] + "<br>");
-document.write("listobject['four']=" + listobject['four'] + "<br>");
+document.write("listobject2['two']=" + listobject2['two'] + "<br>");
+document.write("listobject2['four']=" + listobject2['four'] + "<br>");
 /*
 var list = ['one', 'two', 'three', 'four', 'five']
 for (var i=0; i<list.length; i++)
@@ -22,11 +22,11 @@ document.write(list[i] + "<br>");
 */
 </script>
 <br>   
-<h1>TEST: Iterating data structure from jrun.js file (listobject)</h1>
+<h1>TEST: Iterating data structure from jrun.js file (listobject2)</h1>
 <script>
-document.write("<p>OK, lets iterate <b>listobject</b></p>");
-for (var d in listobject) {
-	document.write(listobject[d] + "<br>");
+document.write("<p>OK, lets iterate <b>listobject2</b></p>");
+for (var d in listobject2) {
+	document.write(listobject2[d] + "<br>");
 }
 </script>
 <br>

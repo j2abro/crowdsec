@@ -19,7 +19,7 @@ def jtest(mydata=None):
 
 mylist = ['one', 'two', 'three', 'four']
 
-@app.route('/idealist/')
+@app.route('/idealist/') 
 def idealist():
 	return render_template('idealist.html', listdata=mylist)
 		
