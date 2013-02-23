@@ -9,23 +9,9 @@
 
 
 <script>
-// THIS WORKS, below, BUT NOT AS INCLUDE
-/*
-
-var listobject = {
-	one: "hello",
-	two: "world",	
-	three: "bit",
-	four: "star",
-	five: "fish",
-	six: "again"
-};
-*/
-
-
-document.write("3 ------------------------------------<br>"); // SO THE FOLLOWING doesn't work from ext .js file
-document.write("4 listo " + listobject['two'] + "<br><br>");
-
+document.write(" ------------------------------------<br>"); // SO THE FOLLOWING doesn't work from ext .js file
+document.write("listobject['two']=" + listobject['two'] + "<br>");
+document.write("listobject['four']=" + listobject['four'] + "<br>");
 /*
 var list = ['one', 'two', 'three', 'four', 'five']
 for (var i=0; i<list.length; i++)
@@ -37,12 +23,21 @@ document.write(list[i] + "<br>");
 <br>
 ============
 <script>
-document.write("<p>OK, lets iterate</p>");
+document.write("<p>OK, lets iterate <b>listobject</b></p>");
 for (var d in listobject) {
 	document.write(listobject[d] + "<br>");
 }
 </script>
 <br>
+{% if listdata %}
+
+<h1>lisdata = {{ listdata }}</h1>
+{% for i in range(1,4) %} 
+<p>Count: {{i}} says: {{ listdata[i] }} <b> got listdata from myapp.py</b></p>
+{% endfor %}
+{% else %}
+<h2>listdata == None</h2>
+{% endif %}
 ============
 
 <script id='js'>
@@ -61,15 +56,6 @@ $(function() {
 </script>
 
 
-{% if listdata %}
-
-<h1>lisdata = {{ listdata }}</h1>
-{% for i in range(1,4) %} 
-<p>Count: {{i}} says: {{ listdata[i] }} <b> got listdata from myapp.py</b></p>
-{% endfor %}
-{% else %}
-<h2>listdata == None</h2>
-{% endif %}
 
 
 <h1>Sortable Table</h1>
