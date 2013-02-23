@@ -1,4 +1,5 @@
-<script>setTimeout(function() { alert("OK, later, show this"); }, 200);</script>
+setTimeout(function() { alert("OK, later, show this"); }, 200);
+
 var listobject = {
 	one: "hello",
 	two: "world",	
@@ -6,5 +7,5 @@ var listobject = {
 	four: "star",
 	five: "fish",
 	six: "again"
-}
+};
 
