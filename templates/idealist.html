@@ -1,5 +1,6 @@
 <!doctype html>
-<title></title>
+<html>
+<head>
 
 <title>Idealist</title>
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='theme.blue.css') }}">
@@ -7,7 +8,8 @@
 <script type=text/javascript src="{{ url_for('static', filename='jquery.tablesorter.min.js') }}"></script>
 <script type=text/javascript src="{{ url_for('static', filename='jrun.js') }}"></script>
 
-
+</head>
+<body>
 <script>
 document.write(" ------------------------------------<br>"); // SO THE FOLLOWING doesn't work from ext .js file
 document.write("listobject['two']=" + listobject['two'] + "<br>");
@@ -21,7 +23,7 @@ document.write(list[i] + "<br>");
 */
 </script>
 <br>
-============
+<h1>TEST: Iterating data structure from jrun.js file (listobject)</h1>
 <script>
 document.write("<p>OK, lets iterate <b>listobject</b></p>");
 for (var d in listobject) {
@@ -31,9 +33,10 @@ for (var d in listobject) {
 <br><br>
 {% if listdata %}
 
-<h1>lisdata = {{ listdata }}</h1>
+<h1>TEST: Argument passing test</h1>
+lisdata = {{ listdata }}<br>
 {% for i in range(1,4) %} 
-<p>Count: {{i}} says: {{ listdata[i] }} <b> got listdata from myapp.py</b></p>
+<p>Count: {{i}} says: <b> {{ listdata[i] }} </b> got listdata from myapp.py</p>
 {% endfor %}
 {% else %}
 <h2>listdata == None</h2>
@@ -100,8 +103,5 @@ $(function() {
 </table>
 
 
-
-
-
-
-<br>
+</body>
+</html>
