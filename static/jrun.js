@@ -1,7 +1,10 @@
 /*
+// test
 setTimeout(function() { alert("OK, later, show this"); }, 200);
-*/
+
+// another test, to test if js file was loaded. this will print as the first line of the html file for which this script was loaded.
 document.write("external jrun.js loaded...."); 
+*/
 
 var listobject2 = {
 	one: "hello",
