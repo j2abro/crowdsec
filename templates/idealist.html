@@ -7,7 +7,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type=text/javascript src="{{ url_for('static', filename='jquery.tablesorter.min.js') }}"></script>
 
-<!-- The following is only needed if we plan to put the entire idealist in a javascript object -->
+<!-- when loading entire idealist as a javascript/json object -->
 <script type=text/javascript src="{{ url_for('static', filename='jrun.js') }}"></script>
 </head>
 <body>
@@ -33,6 +33,8 @@ $(function() {
 
 <h1>Idealist</h1>
 <h2>Sortable Table of Technology and Business Model Ideas</h2>
+This is an experiment of using a sortable list using Python, the Flask framework and Heroku. The <a href = "http://j2abro.blogspot.com/2013/02/business-model-and-technology-ideas.html">original Idealist is hosted on my blog.</a>
+
 
 
 <table class="tablesorter">
