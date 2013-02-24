@@ -9,38 +9,6 @@
 <script type=text/javascript src="{{ url_for('static', filename='jrun.js') }}"></script>
 </head>
 <body>
-<script>
-document.write(" ------------------------------------<br>"); // SO THE FOLLOWING doesn't work from ext .js file
-document.write("listobject2['two']=" + listobject2['two'] + "<br>");
-document.write("listobject2['four']=" + listobject2['four'] + "<br>");
-/*
-var list = ['one', 'two', 'three', 'four', 'five']
-for (var i=0; i<list.length; i++)
-{ 
-document.write(list[i] + "<br>");
-}
-*/
-</script>
-<br>   
-<h1>1 TEST: Iterating data structure from jrun.js file (listobject2)</h1>
-<script>
-document.write("<p>2 OK, lets iterate <b>listobject2 </b></p>" +listobject2);
-for (var d in listobject2) {
-	document.write("3 " + listobject2[d] + "<br>");
-}
-</script> 
-<br>
-{% if listdata %}
-
-<h1>TEST: Argument passing test</h1>
-lisdata = {{ listdata }}<br>
-{% for i in range(1,4) %} 
-<p>Count: {{i}} says: <b> {{ listdata[i] }} </b> got listdata from myapp.py</p>
-{% endfor %}
-{% else %}
-<h2>listdata == None</h2>
-{% endif %}
-============
 
 <script id='js'>
 $(function() {
@@ -60,48 +28,9 @@ $(function() {
 
 
 
-<h1>Sortable Table</h1>
-<!--
-<table class="tablesorter">
-  <thead>
-    <tr>
-      <th>name</th>
-      <th>desc</th>
-      <th>one</th>
-      <th>two</th>
-      <th>three</th>
-      <th>four</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Peter</td>
-      <td>Parker</td>
-      <td>28</td>
-      <td>$9.99</td>
-      <td>20%</td>
-      <td>Jul 6, 2006 8:14 AM</td>
-    </tr>
-    <tr>
-      <td>John</td>
-      <td>Hood</td>
-      <td>33</td>
-      <td>$19.99</td>
-      <td>25%</td>
-      <td>Dec 10, 2002 5:14 AM</td>
-    </tr>
-    <tr>
-      <td>Bruce</td>
-      <td>Evans</td>
-      <td>22</td>
-      <td>$13.19</td>
-      <td>11%</td>
-      <td>Jan 18, 2007 9:12 AM</td>
-    </tr>
-  </tbody>
-</table>
+<h1>Idealist</h1>
+<h2>Sortable Table of Technology and Business Model Ideas</h2>
 
--->
 
 <table class="tablesorter">
   <thead>
@@ -123,7 +52,7 @@ $(function() {
 <tbody>
 	<tr>
 	<td>name</td>
-	<td width="25%">desc</td>
+	<td>desc</td>
 	<td>category</td>
 	<td>link</td>
 	<td>enterprise</td>
