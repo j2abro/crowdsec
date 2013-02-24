@@ -13,8 +13,4 @@ var listobject2 = {
 	seven: "nowfinally"
 }; 
 
-var ilist {
-	
-	
-}
 
