@@ -6,6 +6,8 @@
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='theme.blue.css') }}">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type=text/javascript src="{{ url_for('static', filename='jquery.tablesorter.min.js') }}"></script>
+
+<!-- The following is only needed if we plan to put the entire idealist in a javascript object -->
 <script type=text/javascript src="{{ url_for('static', filename='jrun.js') }}"></script>
 </head>
 <body>
@@ -18,7 +20,8 @@ $(function() {
     theme : 'blue',
 
     // sort on the first column and third column in ascending order
-    sortList: [[0,0],[2,0]]
+    //sortList: [[0,0],[2,0]]
+    sortList: [[2,0]]
   });
 
 });
