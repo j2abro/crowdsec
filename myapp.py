@@ -22,6 +22,10 @@ mylist = ['one', 'two', 'three', 'four']
 @app.route('/idealist/') 
 def idealist():
 	return render_template('idealist.html', listdata=mylist)
+
+@app.route('/index.html') 
+def homepage():
+	return render_template('index.html', listdata=mylist)
 		
 @app.route('/user/<name>')
 def show_name(name):
