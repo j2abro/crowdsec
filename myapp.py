@@ -3,10 +3,6 @@ from flask import Flask, render_template, url_for
 app = Flask(__name__)
 
 
-@app.route('/')
-def hello_world():
-	return 'hello world'
-
 @app.route('/data/')
 @app.route('/data/<mydata>')
 def data(mydata=None):
@@ -23,6 +19,7 @@ mylist = ['one', 'two', 'three', 'four']
 def idealist():
 	return render_template('idealist.html', listdata=mylist)
 
+@app.route('/')
 @app.route('/index.html') 
 def homepage():
 	return render_template('index.html', listdata=mylist)
