@@ -1,73 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CrowdSec</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-<meta charset="utf-8"> 
-<title>Twitter Bootstrap Version2.0 horizontal form layout example</title> 
-<meta name="description" content="Twitter Bootstrap Version2.0 horizontal form layout example from w3resource.com."> 
-<link href="twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">
-</head>
-<body>
-<form class="form-horizontal">
-        <fieldset>
-          <legend>Controls Bootstrap supports</legend>
-          <div class="control-group">
-            <label class="control-label" for="input01">Text input</label>
-            <div class="controls">
-              <input type="text" class="input-xlarge" id="input01">
-              <p class="help-block">In addition to freeform text, any HTML5 text-based input appears like so.</p>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="optionsCheckbox">Checkbox</label>
-            <div class="controls">
-              <label class="checkbox">
-                <input type="checkbox" id="optionsCheckbox" value="option1">
-                Option one is this and that—be sure to include why it's great
-              </label>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="select01">Select list</label>
-            <div class="controls">
-              <select id="select01">
-                <option>something</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="multiSelect">Multicon-select</label>
-            <div class="controls">
-              <select multiple="multiple" id="multiSelect">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="fileInput">File input</label>
-            <div class="controls">
-              <input class="input-file" id="fileInput" type="file">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="textarea">Textarea</label>
-            <div class="controls">
-              <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
-            </div>
-          </div>
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Save changes</button>
-            <button class="btn">Cancel</button>
-          </div>
-        </fieldset>
-</form>
-</body>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap-responsive.css') }}">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+<div class="container">
+	
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">CrowdSec</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="/index.html">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+<!--
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+-->
+              </li>
+<!--
+            </ul>
+            <form class="navbar-form pull-right">
+              <input class="span2" type="text" placeholder="Email">
+              <input class="span2" type="password" placeholder="Password">
+              <button type="submit" class="btn">Sign in</button>
+            </form>
+-->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+		<!-- ///////////////  FORM  //////////////// -->
+		<form class="form-horizontal">
+		        <fieldset>
+		          <legend>Issue Submittal Form</legend>
+		
+		<!-- //// RADIO //// -->       
+		<div class="control-group">
+			<label class="control-label" for="optionsRadios1">User Name</label>
+			<div class="controls">
+				<label class="radio inline">
+				  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+				  Anonymous
+				</label>
+				<label class="radio inline">
+				  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+				  Fred
+				</label>
+			</div>
+			</div>	
+			
+			<!-- //// dddddd //// --> 	
+				<div class="control-group">
+		            <label class="control-label" for="select01">Select Category</label>
+		            <div class="controls">
+		              <select id="select01">
+						<option>select</option>
+						{% for item in listdata %} 
+						<option> {{ item }}</option>
+						{% endfor %}
+		              </select>
+					<p class="help-block">Select the category that describes the issue, or other if none are relevant.</p>
+		            </div>
+					
+		          </div> 
+			
+			<!-- //// dddddd //// --> 
+			<!--
+		          <div class="control-group">
+		            <label class="control-label" for="input01">Text input</label>
+		            <div class="controls">
+		              <input type="text" class="input-xlarge" id="input01">
+		            </div>
+		          </div>
+			-->
+			
+		          
+
+		
+				<!-- //// dddddd //// --> 
+				<!--
+		          <div class="control-group">
+		            <label class="control-label" for="multiSelect">Multicon-select</label>
+		            <div class="controls">
+		              <select multiple="multiple" id="multiSelect">
+						{% for i in range(1,4) %} 
+						<option> {{ listdata[i] }}</option>
+						{% endfor %}
+
+		              </select>
+		            </div>
+		          </div>
+				
+				
+		          <div class="control-group">
+		            <label class="control-label" for="fileInput">File input</label>
+		            <div class="controls">
+		              <input class="input-file" id="fileInput" type="file">
+		            </div>
+		          </div>
+		
+				-->
+		        
+				<!-- //// dddddd //// --> 
+		  		<div class="control-group">
+		            <label class="control-label" for="textarea">Textarea</label>
+		            <div class="controls">
+		              <textarea class="input-xlarge" id="textarea" rows="10"></textarea>
+					<p class="help-block">Describe the issue in 1-3 sentences.</p>
+		            </div>
+		          </div>
+		          <div class="form-actions">
+		            <button type="submit" class="btn btn-primary">Save changes</button>
+		            <button class="btn">Cancel</button>
+		          </div>
+		        </fieldset>
+		</form>
+
+
+      </div>
+
+<hr>	
+
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span4">
+          row, span 4, is right here.
+        </div>
+      </div>
+
+      <hr>
+
+
+      <footer>
+        <p>&copy; CrowdSec 2013</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-transition.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-alert.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-modal.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-dropdown.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-scrollspy.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-tab.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-tooltip.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-popover.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-button.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-collapse.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-carousel.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-typeahead.js') }}"></script>
+
+
+  </body>
 </html>
+
+

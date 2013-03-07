@@ -2,7 +2,7 @@ import os
 from flask import Flask, render_template, url_for
 app = Flask(__name__)
 
-
+# TESTING
 @app.route('/data/')
 @app.route('/data/<mydata>')
 def data(mydata=None):
@@ -13,20 +13,40 @@ def data(mydata=None):
 def jtest(mydata=None):
 	return render_template('jtest.html', mydata=mydata)
 
+@app.route('/user/<name>')
+def show_name(name):
+	return 'VERSION 2 - your name is %s' % name
+
 mylist = ['one', 'two', 'three', 'four']
 
+myCategories = [
+	'Physical Security', 
+	'Data Security', 
+	'Web Application Security',
+	'Network Security',
+	'Theft',
+	'Policy Issue',
+	'Wireless Security',
+	'Employee Safety',
+	'Other']
+
+# IDEALIST
 @app.route('/idealist/') 
 def idealist():
 	return render_template('idealist.html', listdata=mylist)
 
+
+		
 @app.route('/')
 @app.route('/index.html') 
 def homepage():
 	return render_template('index.html', listdata=mylist)
-		
-@app.route('/user/<name>')
-def show_name(name):
-	return 'VERSION 2 - your name is %s' % name
+
+
+@app.route('/log.html') 
+def logissue():
+	return render_template('log.html', listdata=myCategories)		
+
 	
 @app.errorhandler(404)
 def page_not_found(error): 
