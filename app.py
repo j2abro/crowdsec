@@ -41,7 +41,7 @@ def idealist():
 
 #### TESTING (start) #####
 
-# j2 page to mess around with flask/jinja
+# j2 page to mess around with flask/jinja, tablesorter
 @app.route('/jtest/')
 @app.route('/data/<mydata>')
 def jtest(mydata=None):

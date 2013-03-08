@@ -1,5 +1,5 @@
 <!doctype html>
-<title>test page</title>
+<title>j2 sandbox test page</title>
 Test various ways to pass data to page, call js files and tablesorter 
 <hr>
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='theme.blue.css') }}">
@@ -14,15 +14,12 @@ Test various ways to pass data to page, call js files and tablesorter
 <h2>this should work on any browser</h2>
 <h3>more subtest goes here</h3>
 <br>
-<br>
-
 {% endif %}
 <hr>
 <script>setTimeout(function() { alert("OK, later, show this"); }, 4000);</script>
 
 <script id='js'>
 $(function() {
-
   // call the tablesorter plugin
   $("table").tablesorter({
     theme : 'blue',
