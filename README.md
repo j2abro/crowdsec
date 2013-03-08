@@ -15,12 +15,11 @@ Create a virtual environment in the 'venv' (directory will be created)
 
 Start the environment. your prompt will change: (venv)
 
-	$ . myvirtualenv/bin/activate
+	$ . venv/bin/activate
 
 install/activate Flask in virtual environment
 
 	$ pip install Flask
-
 
 ### Heroku specifics
 
@@ -93,7 +92,13 @@ Then commit changes and push to heroku
 Go to dev directory and start virtualenv
 
 	$ cd crowdsec
+	
+Then I've been doing this (but does this overwrite previous pip installs?, without doing this, i get an error on foreman start)	
+
 	$ virtualenv venv
+
+Start environment
+
 	$ . venv/bin/activate
 
 Then either start app locally
