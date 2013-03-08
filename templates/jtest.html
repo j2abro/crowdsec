@@ -1,13 +1,14 @@
 <!doctype html>
-<title>Jtest page</title>
-<title>Flaskr</title>
+<title>test page</title>
+Test various ways to pass data to page, call js files and tablesorter 
+<hr>
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='theme.blue.css') }}">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type=text/javascript src="{{ url_for('static', filename='jquery.tablesorter.min.js') }}"></script>
-<script type=text/javascript src="{{ url_for('static', filename='jrun.js') }}"></script>
-{% if mydata %}
-data = {{ mydata }}
+<script type=text/javascript src="{{ url_for('static', filename='js/jtest.js') }}"></script>
 
+{% if mydata %}
+	data = {{ mydata }}
 {% else %}
 <h1>Here is sortable table</h1>
 <h2>this should work on any browser</h2>
@@ -16,8 +17,8 @@ data = {{ mydata }}
 <br>
 
 {% endif %}
-
-<script>setTimeout(function() { alert("OK, later, show this"); }, 20000);</script>
+<hr>
+<script>setTimeout(function() { alert("OK, later, show this"); }, 4000);</script>
 
 <script id='js'>
 $(function() {
@@ -33,7 +34,6 @@ $(function() {
 });
 
 </script>
-
 
 <table class="tablesorter">
   <thead>

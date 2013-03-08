@@ -2,10 +2,10 @@ import os
 from flask import Flask, render_template, url_for
 app = Flask(__name__)
 
-# data structure to use for testing various page loading scenarios, at bottom
+# data structure to use for testing various page loading scenarios
 mylist = ['one', 'two', 'three', 'four']
 
-# categories for log.html (log an issue form)
+# categories for log.html (log an issue form), this will probably get moved elsewhere....
 myCategories = [
 	'Physical Security', 
 	'Data Security', 
@@ -17,7 +17,7 @@ myCategories = [
 	'Employee Safety',
 	'Other']
 
-# route to home page
+# route to home page, the mylist data is not used on this page
 @app.route('/')
 @app.route('/index.html') 
 def homepage():
@@ -39,22 +39,20 @@ def page_not_found(error):
 def idealist():
 	return render_template('idealist.html', listdata=mylist)
 
-# TESTING
+#### TESTING (start) #####
 
+# j2 page to mess around with flask/jinja
 @app.route('/jtest/')
 @app.route('/data/<mydata>')
 def jtest(mydata=None):
 	return render_template('jtest.html', mydata=mydata)
 
+# from flaskr demo
 @app.route('/user/<name>')
 def show_name(name):
 	return 'VERSION 2 - your name is %s' % name
 
-
-
-
-
-		
+#### TESTING (end) #####	
 
 
 # debug not suitable for production
