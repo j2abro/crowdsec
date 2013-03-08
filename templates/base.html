@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CrowdSec</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.css') }}">
+	<style type="text/css">
+		body {
+			padding-top: 60px;
+			padding-bottom: 40px;
+		}
+	</style>	
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap-responsive.css') }}">	
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/datepicker.css') }}">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ 
+
+	{% block head %}{% endblock %}
+
+	
+	<!-- JA TODO:  what's this for. At least link to google hosted version -->
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="../assets/js/html5shiv.js"></script>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- JA TODO: what's this -->
+	<!-- Fav and touch icons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="../assets/ico/favicon.png">
+  
+</head>
+
+<body>
+
+<div class="container">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="#">CrowdSec</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="active"><a href="/index.html">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+					
+					<!-- signup form here (code snippet below) -->
+				
+				</div><!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
+</div>		
+
+<div class="container">
+	{% block content %}{% endblock %}
+</div>
+	
+
+
+<footer>
+	<p>&copy; CrowdSec 2013</p>
+</footer>
+
+  
+
+	<!-- signup form code, goes above
+	form class="navbar-form pull-right">
+		<input class="span2" type="text" placeholder="Email">
+		<input class="span2" type="password" placeholder="Password">
+		<button type="submit" class="btn">Sign in</button>
+	</form>
+	-->
+	
+    <!-- Le javascriptdddd ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+
+	<!-- Javascript specific to the child page -->
+	{% block endincludes %}{% endblock %}
+
+
+	
+    <script src="{{ url_for('static', filename='js/bootstrap-transition.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-alert.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-modal.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-dropdown.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-scrollspy.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-tab.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-tooltip.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-popover.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-button.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-collapse.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-carousel.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-typeahead.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-datepicker.js') }}"></script>
+
+  </body>
+</html>
+
+

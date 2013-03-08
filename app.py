@@ -28,6 +28,11 @@ def homepage():
 def logissue():
 	return render_template('log.html', listdata=myCategories)		
 
+@app.route('/child.html') 
+def logissue():
+	return render_template('child.html', listdata=myCategories)
+
+
 # default error 
 @app.errorhandler(404)
 def page_not_found(error): 
