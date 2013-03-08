@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # crowdsec
 
 An experiment in crowdsourcing security risk management within an organization.
@@ -109,10 +108,3 @@ Then either start app locally
 Or on live heroku platform
 
 	$ git push heroku
-
-=======
-crowdsec
-========
-
-Experiment in crowdsourcing security risk within organizations
->>>>>>> 3f7358d39c721ced0983c9fafc5f5cd8035d55ac
