@@ -1,9 +1,13 @@
 /*
-// test
+
+This file is just a test of including some datastructures (javasctipt objects) and js code in a file that can be called by flask.
+
+// test - show alert box
 setTimeout(function() { alert("OK, later, show this"); }, 200);
 
 // another test, to test if js file was loaded. this will print as the first line of the html file for which this script was loaded.
 document.write("external jrun.js loaded...."); 
+
 */
 
 var listobject2 = {
@@ -29,7 +33,7 @@ var workoutSpeed = [
 		sales_density: 5,
 		big_potential: 2,				
 	},
-	{	name: "McRun",	
+	{	name: "running app",	
 		desc: "Add features to existing app.",	
 		catgory: "Sports",
 		enterprise: false,
