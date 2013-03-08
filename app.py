@@ -2,23 +2,10 @@ import os
 from flask import Flask, render_template, url_for
 app = Flask(__name__)
 
-# TESTING
-@app.route('/data/')
-@app.route('/data/<mydata>')
-def data(mydata=None):
-	return render_template('data.html', mydata=mydata)
-
-@app.route('/jtest/')
-@app.route('/data/<mydata>')
-def jtest(mydata=None):
-	return render_template('jtest.html', mydata=mydata)
-
-@app.route('/user/<name>')
-def show_name(name):
-	return 'VERSION 2 - your name is %s' % name
-
+# data structure to use for testing various page loading scenarios, at bottom
 mylist = ['one', 'two', 'three', 'four']
 
+# categories for log.html (log an issue form)
 myCategories = [
 	'Physical Security', 
 	'Data Security', 
@@ -30,28 +17,47 @@ myCategories = [
 	'Employee Safety',
 	'Other']
 
-# IDEALIST
-@app.route('/idealist/') 
-def idealist():
-	return render_template('idealist.html', listdata=mylist)
-
-
-		
+# route to home page
 @app.route('/')
 @app.route('/index.html') 
 def homepage():
 	return render_template('index.html', listdata=mylist)
 
-
+# log an issue form
 @app.route('/log.html') 
 def logissue():
 	return render_template('log.html', listdata=myCategories)		
 
-	
+# default error 
 @app.errorhandler(404)
 def page_not_found(error): 
 	return render_template('404.html'), 404
-			
+
+# IDEALIST: this is a page that is served and referenced from j2 blog, i'll find a new home for this later.
+# for now, this page just requires this statement, the templates/idealist.html file and associated .js & .css files
+@app.route('/idealist/') 
+def idealist():
+	return render_template('idealist.html', listdata=mylist)
+
+# TESTING
+
+@app.route('/jtest/')
+@app.route('/data/<mydata>')
+def jtest(mydata=None):
+	return render_template('jtest.html', mydata=mydata)
+
+@app.route('/user/<name>')
+def show_name(name):
+	return 'VERSION 2 - your name is %s' % name
+
+
+
+
+
+		
+
+
+# debug not suitable for production
 app.debug = True
 if __name__ == '__main__':
 	# bind to PORT if defined, otherwise default to 5000
