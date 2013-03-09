@@ -41,6 +41,16 @@
 
 <body>
 
+	{% set navigation_bar = [
+	    ('/', 'index', 'Index'),
+	    ('/log.html', 'log', 'Log'),
+	    ('/reports.html', 'reports', 'Reports'),
+	    ('/about.html', 'about', 'About'),
+	    ('/contact.html', 'contact', 'Contact')
+	] -%}
+	
+	{% set active_page = active_page|default('index') -%}
+	
 <div class="container">
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
@@ -51,13 +61,12 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="brand" href="#">CrowdSec</a>
+			
 				<div class="nav-collapse collapse">
 					<ul class="nav">
-						<li class="active"><a href="/index.html">Home</a></li>
-						<li><a href="#about">About</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-					
+						{% for href, id, caption in navigation_bar %}
+						  <li{% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
+						{% endfor %}
 					<!-- signup form here (code snippet below) -->
 				
 				</div><!--/.nav-collapse -->
@@ -65,6 +74,14 @@
 		</div>
 	</div>
 </div>		
+
+<!--
+	<li {% if page == "home" %}  class="active" {% endif %} ><a href="/index.html">Home</a></li>
+	<li {% if page == "log" %}  class="active" {% endif %}><a href="/log.html">Log</a></li>
+	<li {% if page == "about" %}  class="active" {% endif %}><a href="#about">About</a></li>
+	<li {% if page == "contact" %}  class="active" {% endif %}><a href="#contact">Contact</a></li>
+</ul>
+-->
 
 <div class="container">
 	{% block content %}{% endblock %}

@@ -26,7 +26,7 @@ def homepage():
 # log an issue form
 @app.route('/log.html') 
 def logissue():
-	return render_template('log.html', listdata=myCategories)
+	return render_template('log.html', page="log")
 
 # default error 
 @app.errorhandler(404)
