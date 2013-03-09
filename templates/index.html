@@ -1,136 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>CrowdSec</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+{% extends "base.html" %}
 
-	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.css') }}">
+{% set active_page = "Home" %}
 
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-    </style>
+{% block head %}
 
-	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap-responsive.css') }}">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
-
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
-  </head>
-
-  <body>
-
-	<!-- ////////////////////  NAVBAR (start) //////////////////// -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="#">CrowdSec</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="/index.html">Home</a></li>
-              	<li><a href="#about">About</a></li>
-              	<li><a href="#contact">Contact</a></li>
-              </li>
-<!--
-            </ul>
-            <form class="navbar-form pull-right">
-              <input class="span2" type="text" placeholder="Email">
-              <input class="span2" type="password" placeholder="Password">
-              <button type="submit" class="btn">Sign in</button>
-            </form>
--->
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-	<!-- ////////////////////  NAVBAR (end) //////////////////// -->
-	
-    <div class="container">
-
-      <!-- Main box at top -->
-      <div class="hero-unit">
-        <h1>CrowdSec</h1>
-        <p>Crowdsourced security. Mitigate your risk by leveraging your team to help identify security risk in your organization. Minimize enterprise security risk by building a community of aware and informed employees</p>
-        <p><a href="#" class="btn btn-primary btn-large">Free Trial &raquo;</a></p>
-      </div>
-
-      <!-- Example row with one colloum / JA -->
-      <div class="row">
-        <div class="span12">
-          <h1>How it works</h1>
-          <p>Just sign up and allow employees at your organization log security issues that they notice. </p>
-          <p><a class="btn" href="/log.html">Try logging an issue &raquo;</a></p>
-        </div>
-      </div>
-
-<hr>
-
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="span4">
-          <h2>See a something</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem . </p>
-          
-        </div>
-        <div class="span4">
-          <h2>Report it to CrowdSec</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit ame mollis euismod. Donec sed odio dui. </p>
-       </div>
-        <div class="span4">
-          <h2>Win a prize</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, telrtor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </div>
-      </div>
-
-      <hr>
-
-<a href="log.html">Submit and issue</a>
-
-<hr>
+{% endblock %}
 
 
-      <footer>
-        <p>&copy; Company 2013</p>
-      </footer>
+{% block content %}
 
-    </div> <!-- /container -->
+<div class="container">
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+	      <!-- Main box at top -->
+	      <div class="hero-unit">
+	        <h1>CrowdSec</h1>
+	        <p>Crowdsourced security. Mitigate your risk by leveraging your team to help identify security risk in your organization. Minimize enterprise security risk by building a community of aware and informed employees</p>
+	        <p><a href="#" class="btn btn-primary btn-large">Free Trial &raquo;</a></p>
+	      </div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-transition.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-alert.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-modal.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-dropdown.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-scrollspy.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-tab.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-tooltip.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-popover.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-button.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-collapse.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-carousel.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap-typeahead.js') }}"></script>
+	      <!-- Example row with one colloum / JA -->
+	      <div class="row">
+	        <div class="span12">
+	          <h1>How it works</h1>
+	          <p>Just sign up and allow employees at your organization log security issues that they notice. </p>
+	          <p><a class="btn" href="/log.html">Try logging an issue &raquo;</a></p>
+	        </div>
+	      </div>
+
+	<hr>
+
+	      <!-- Example row of columns -->
+	      <div class="row">
+	        <div class="span4">
+	          <h2>See a something</h2>
+	          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem . </p>
+
+	        </div>
+	        <div class="span4">
+	          <h2>Report it to CrowdSec</h2>
+	          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit ame mollis euismod. Donec sed odio dui. </p>
+	       </div>
+	        <div class="span4">
+	          <h2>Win a prize</h2>
+	          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, telrtor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+	        </div>
+	      </div>
+
+	      <hr>
+
+	<a href="log.html">Submit and issue</a>
 
 
-  </body>
-</html>
+
+</div>
+
+{% endblock %}
+
+<!-- Add any script or additional includes that are specific to this page -->
+{% block endincludes %}
+
+{% endblock %}

@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% set active_page = "reports" %}
+
+{% block head %}
+    <script type="text/javascript">
+		$(function () {
+		    // do stuff after DOM has loaded
+			$('.dp3').datepicker()
+		});
+	
+		$(document).ready(function() {
+		    $('.dp3').datepicker()
+		});
+	</script>
+{% endblock %}
+
+
+{% block content %}
+
+
+<div class="tabbable"> <!-- Only required for left/right tabs -->
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#tab1" data-toggle="tab">Findings Summary</a></li>
+		<li><a href="#tab2" data-toggle="tab">Areas of Risk</a></li>
+	</ul>
+	<div class="tab-content">
+		
+		<!-- ==========tab1 =========== -->		
+		<div class="tab-pane active" id="tab1">
+			<legend>Findings</legend>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+   				        <th>Name</th>
+   				        <th>Date</th>
+   				        <th>Category</th>
+   				        <th>Description</th>
+   					</tr>
+   				</thead>
+   				<tbody>
+					{% for name, date, category, desc in report_table %}
+					<tr>
+						<td>{{ name }}</td>
+						<td>{{ date }}</td>
+						<td>{{ category }}</td>
+						<td>{{ desc }}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div> <!-- end of tab1 pane -->
+
+		<!-- ==========tab2 =========== -->			
+    	<div class="tab-pane fade in" id="tab2">
+			<legend>Issues by Category</legend>
+
+			<div class="row-fluid">
+				<div class="span3">
+					<h3>Physical Security</h3>
+					<img src="static/img/g1.png">
+					<p><a class="btn" href="#">View details &raquo;</a></p>
+				</div><!--/span-->
+				<div class="span3">
+					<h3>Data Security</h3>
+					<img src="static/img/g2.png">
+					<p><a class="btn" href="#">View details &raquo;</a></p>
+				</div><!--/span-->
+				<div class="span3">
+					<h3>Web Application</h3>
+					<img src="static/img/g3.png">
+					<p><a class="btn" href="#">View details &raquo;</a></p>
+				</div><!--/span-->
+			</div><!--/row-->
+
+			<div class="row-fluid">
+				<div class="span3">
+					<h3>Network Security</h3>
+					<img src="static/img/g4.png">
+					<p><a class="btn" href="#">View details &raquo;</a></p>
+				</div><!--/span-->
+				<div class="span3">
+					<h3>Policy Issue</h3>
+					<img src="static/img/g5.png">
+ 					<p><a class="btn" href="#">View details &raquo;</a></p>
+				</div><!--/span-->
+				<div class="span3">
+					<h3>Wireless Security</h3>
+					<img src="static/img/g1.png">
+					<p><a class="btn" href="#">View details &raquo;</a></p>
+				</div><!--/span-->
+			</div><!--/row-->
+
+		</div> <!-- end of tab2 pane -->
+  </div> <!-- end of tab content -->
+</div> <!-- end of tabable -->
+
+
+{% endblock %}
+
+<!-- Add any script or additional includes that are specific to this page -->
+{% block endincludes %}
+
+{% endblock %}

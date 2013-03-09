@@ -42,7 +42,7 @@
 <body>
 
 	{% set navigation_bar = [
-	    ('/', 'index', 'Index'),
+	    ('/', 'index', 'Home'),
 	    ('/log.html', 'log', 'Log'),
 	    ('/reports.html', 'reports', 'Reports'),
 	    ('/about.html', 'about', 'About'),
@@ -60,13 +60,14 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="brand" href="#">CrowdSec</a>
+				<a class="brand" href="/">CrowdSec</a>
 			
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 						{% for href, id, caption in navigation_bar %}
 						  <li{% if id == active_page %} class="active"{% endif %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
 						{% endfor %}
+					
 					<!-- signup form here (code snippet below) -->
 				
 				</div><!--/.nav-collapse -->
@@ -85,13 +86,16 @@
 
 <div class="container">
 	{% block content %}{% endblock %}
+
+
+	<footer>
+		<br><br><p>&copy; CrowdSec 2013</p>
+	</footer>
 </div>
 	
 
 
-<footer>
-	<p>&copy; CrowdSec 2013</p>
-</footer>
+
 
   
 
